@@ -18,6 +18,11 @@ Carefully heed the user's instructions.
 Respond using Markdown.`;
 
 export const modelOptions: ModelOptions[] = [
+  'majo:gpt-3.5-turbo',
+  'openai:gpt-3.5-turbo',
+  'openai:gpt-3.5-turbo-16k',
+  'openai:gpt-3.5-enhanced-for-role-play',
+  'openai:gpt-4',
   'gpt-3.5-turbo',
   'gpt-3.5-turbo-16k',
   'gpt-4',
@@ -27,15 +32,20 @@ export const modelOptions: ModelOptions[] = [
   // 'gpt-4-32k-0314',
 ];
 
-export const defaultModel = 'gpt-3.5-turbo';
+export const defaultModel = 'majo:gpt-3.5-turbo';
 
 export const modelMaxToken = {
   'gpt-3.5-turbo': 4096,
+  'majo:gpt-3.5-turbo': 4096,
+  'openai:gpt-3.5-turbo': 4096,
+  'openai:gpt-3.5-turbo-16k': 16384,
+  'openai:gpt-3.5-enhanced-for-role-play': 4096,
   'gpt-3.5-turbo-0301': 4096,
   'gpt-3.5-turbo-0613': 4096,
   'gpt-3.5-turbo-16k': 16384,
   'gpt-3.5-turbo-16k-0613': 16384,
   'gpt-4': 8192,
+  'openai:gpt-4': 8192,
   'gpt-4-0314': 8192,
   'gpt-4-0613': 8192,
   'gpt-4-32k': 32768,
@@ -87,6 +97,26 @@ export const modelCost = {
   'gpt-4-32k-0613': {
     prompt: { price: 0.06, unit: 1000 },
     completion: { price: 0.12, unit: 1000 },
+  },
+  'majo:gpt-3.5-turbo': {
+    prompt: { price: 0.8, unit: 1000 },
+    completion: { price: 0.8, unit: 1000 },
+  },
+  'openai:gpt-3.5-turbo': {
+    prompt: { price: 0.8, unit: 1000 },
+    completion: { price: 0.8, unit: 1000 },
+  },
+  'openai:gpt-3.5-turbo-16k': {
+    prompt: { price: 0.8, unit: 1000 },
+    completion: { price: 0.8, unit: 1000 },
+  },
+  'openai:gpt-3.5-enhanced-for-role-play': {
+    prompt: { price: 3.6, unit: 1000 },
+    completion: { price: 3.6, unit: 1000 },
+  },
+  'openai:gpt-4': {
+    prompt: { price: 12, unit: 1000 },
+    completion: { price: 12, unit: 1000 },
   },
 };
 
